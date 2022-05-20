@@ -1,0 +1,22 @@
+apiVersion: 1
+
+datasources:
+  - name: Demo
+    type: elasticsearch
+    access: proxy
+    database: "demo_*"
+    url: http://134.79.216.60:9200
+    jsonData:
+      esVersion: 60
+      timeField: "message_time"
+      logMessageField: "id"
+
+  - name: CRYO
+    type: elasticsearch
+    access: proxy
+    database: "cryo_*"
+    url: http://134.79.216.60:9200
+    jsonData:
+      esVersion: 60
+      timeField: "message_time"
+      logMessageField: "id"
